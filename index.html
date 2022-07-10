@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>test</h1>
-</body>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>
+        Odessa Kharkiv Dnipro Luhansk Mariupol Lviv
+      </h2>
+      <form id="enter-city">
+        <div class="form-group longBoard">
+          <input
+            type="text"
+            class="form-control shadow-sm p-2 mb-2 bg-white rounded"
+            id="form-city"
+            placeholder="Enter your city"
+            autofocus="on"
+          />
+          <button class="search-line">
+            Search
+          </button>
+
+          <button class="current-line" id="geo-location">
+            Current
+          </button>
+        </div>
+      </form>
+      <br />
+      <div class="currently-card">
+        <div class="card-header">
+          <h4 id="city-name" class="upgrate">
+            Kyiv
+          </h4>
+          <div id="current-time"></div>
+          <div class="today">
+            <h5 id="weather-description" class="upgrate">
+              Sunny
+            </h5>
+            <div class="firstPicture">
+              <img src="image/girl.svg" width="80px" />
+              <span class="temperature" id="current-temp">28</span>
+              <span class="dataFC">
+                <a href="#" id="celsius">°C</a> |
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sunday</h5>
+              <p class="card-text">
+                04 June
+                <br />
+                20º
+                <br />
+                <img src="image/rain.svg" width="80px" height="80px" />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Monday</h5>
+              <p class="card-text">
+                05 June
+                <br />
+                22º
+                <br />
+                <img src="image/sun.svg" width="80px" height="80px" />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tuesday</h5>
+              <p class="card-text">
+                06 June
+                <br />
+                31º
+                <br />
+                <img src="image/sun.svg" width="80px" height="80px" />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wednesday</h5>
+              <p class="card-text">
+                07 June
+                <br />
+                25º
+                <br />
+                <img src="image/wind.svg" width="80px" height="80px" />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thursday</h5>
+              <p class="card-text">
+                08 June
+                <br />
+                20ºC
+                <br />
+                <img src="image/wind.svg" width="80px" height="80px" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
