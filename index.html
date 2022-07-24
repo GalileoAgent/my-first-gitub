@@ -1,63 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-    <link href="src/styles.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-  </head>
-
-  <body>
-    <div class="container">
-      <h2>
-        Odessa Kharkiv Dnipro Luhansk Mariupol Lviv
-      </h2>
-      <form id="enter-city">
-        <div class="form-group longBoard">
-          <input
-            type="text"
-            class="form-control shadow-sm p-2 mb-2 bg-white rounded"
-            id="form-city"
-            placeholder="Enter your city"
-            autofocus="on"
-          />
-          <button class="search-line">
-            Search
-          </button>
-
-          <button class="current-line" id="geo-location">
-            Current
-          </button>
-        </div>
-      </form>
-      <br />
-      <div class="currently-card">
-        <div class="card-header">
-          <h4 id="city-name" class="upgrate">
-            Kyiv
-          </h4>
-          <div id="current-time"></div>
-          <div class="today">
-            <h5 id="weather-description" class="upgrate">
-              Sunny
-            </h5>
-            <div class="firstPicture">
-              <img src="image/girl.svg" width="80px" />
-              <span class="temperature" id="current-temp">28</span>
-              <span class="dataFC">
-                <a href="#" id="celsius">°C</a> |
-                <a href="#" id="fahrenheit">°F</a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <link rel="stylesheet" href="src/style.css"> 
+    <title>Weather</title>
+</head>
+<body>
+<div class="container">
+    <div class="weather-app-wrapper">
+    <div class="weather-app">
+        <div class="overview"> 
+        <form id="search-form" class="mb-3">
+            <div class="row">
+            <div class="col-9">     
+        <input type="search" placeholder="Type a city ..."class="form-control" id="city-input" autocomplete="off"/>
+   </div>
+<div class="col-3">
+    <input type="submit" value="Search" class="btn btn-primary w-100"/>   
+</div>
+</div>
+    </form>
+       <div class="overview"> 
+    <h1 id="city"> </h1>
+    <ul>
+        <li> Last update: <span id="date"></span></li>
+        <li id="description"> </li>
+    </ul>
+       </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="clearfix weather-temperature">
+<img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" alt="Clear" id="icon"class="float-left"/>
+<div class="float-left">
+<strong id="temperature"> </strong>
+<span class="units">
+<a href="#" id="celsius-link"class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a> </span> 
+</div>
+</div>
+<div class="col-6">
+    <ul>
+        <li>Humidity: <span id ="humidity"> </span>%</li>
+        <li>Wind: <span id ="wind"></span> km/h</li>
+    </ul>
+</div>
+</div>
+</div>
+<small>
+    <a href="" target="_blank"
+            >Open-source code </a>
+          by Nataliia Slipukhina
+</small>
+</div>
+</div>
+<script src="src/app.js "></script>
+</body>
+</html>
       <br />
       <div class="row row-cols-1 row-cols-md-5 g-5">
         <div class="col">
