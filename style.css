@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-}
+       }; 
+ 
 h1{
     color: #878787;
     font-size: 24px;
@@ -48,6 +49,7 @@ margin-bottom: 20px;
 .weather-app-wrapper {
     max-width: 600px;
     margin: 30px auto; 
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 .weather-app {
     padding: 20px;
@@ -55,7 +57,7 @@ margin-bottom: 20px;
     border-radius: 5px;
 }
 .weather-temperature .active{
-    color: rgb(33, 33, 33);
+  color: #878787;
     cursor: default;
    }
 .weather-temperature .active:hover{
@@ -67,4 +69,17 @@ margin-bottom: 20px;
 }
 #celsius-link{
   text-decoration: none;
+}
+.weather-forecast-date{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #878787;
+}
+.weather-forecast-temperature-max{
+  line-height: 1.5;
+  color: blue;
+  font-weight: 700;
+}
+
+.weather-forecast-temperature-min{
+  color: #878787;
 }
